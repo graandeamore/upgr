@@ -1,0 +1,238 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.wrapper {
+  font-family: "Roboto", sans-serif;
+}
+.spaceout {
+  height: 20px;
+  background-color: #fefefe;
+}
+.nav {
+  background-color: #fedba9;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1600px;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+}
+.nav__block {
+  width: 30%;
+}
+
+.container {
+  max-width: 1600px;
+}
+.nav__logo {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 100%;
+}
+
+.nav__menu {
+  border: 1px solid green;
+  font-family: "Roboto", sans-serif;
+}
+.nav__logo-block {
+  width: 30%;
+}
+
+.nav__menu-element {
+  align-items: center;
+  font-size: 30px;
+
+  margin: 0 0 0 80px;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.nav__logo-name {
+  margin: 0 0 0 20px;
+}
+
+.nav__logo {
+  margin: 0 0 0 0px;
+}
+.nav__logo-img {
+  margin: 0;
+}
+.nav__menu-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 100%;
+  justify-content: flex-end;
+  margin: 0 0 0 200px;
+}
+.hyper {
+  color: #000;
+  text-decoration: none;
+}
+.hyperMain {
+}
+.hyperHelp {
+}
+.hyperAssociation {
+}
+.hyperAbout {
+}
+.main {
+  display: flex;
+  border: 1px solid #000;
+  margin: 40px auto;
+  justify-content: center;
+  background-color: #fedba9;
+  max-width: 600px;
+  height: 100%;
+}
+.main__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  margin: 50px auto;
+}
+.main__form {
+}
+.main__form-container {
+}
+.main__form-box {
+}
+.main__form-input {
+  margin: 40px auto;
+}
+.InputShipper {
+}
+
+.InputReciever {
+}
+
+
+.additional__form {
+}
+.additional__form-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  margin: 50px auto;
+}
+
+#additionalDocs {
+    display: none;
+    border: 1px solid #000;
+    margin: 40px auto;
+    justify-content: center;
+    background-color: #fedba9;
+    max-width: 600px;
+    height: 100%;
+  }
+  #additionalContainer{
+    display: none;
+    border: 1px solid #000;
+    margin: 40px auto;
+    justify-content: center;
+    background-color: #fedba9;
+    max-width: 600px;
+    height: 100%;
+  }
+  #additionalBox{
+    display: none;
+    border: 1px solid #000;
+    margin: 40px auto;
+    justify-content: center;
+    background-color: #fedba9;
+    max-width: 600px;
+    height: 100%;
+  }
+  #additionalOther{
+    display: none;
+    border: 1px solid #000;
+    margin: 40px auto;
+    justify-content: center;
+    background-color: #fedba9;
+    max-width: 600px;
+    height: 100%;
+  }
+  #Spisok{
+      display: none;
+  }
+  #docsYes-box{
+      display: none;
+  }
+  #yourdocs{
+      
+  }

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agregator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="spaceout"></div>
+      <div class="nav">
+        <div class="nav__menu-element nav__logo">
+          <div class="nav__menu-element nav__logo-img">
+            <img src="img/logo.png" alt="" />
+          </div>
+          <div class="nav__menu-element nav__logo-name">
+            <p>
+              <b>NameCompany</b> <br />
+              Приморский край
+            </p>
+          </div>
+        </div>
+
+        <div class="nav__menu-container">
+          <div class="nav-space nav__menu-element">
+            <a class="hyper hyperMain" href="#">Главная</a>
+          </div>
+          <div class="nav__menu-element">
+            <a class="hyper hyperHelp" href="#">Помощь</a>
+          </div>
+          <div class="nav__menu-element">
+            <a class="hyper hyperAssociation" href="#">Сотрудничество</a>
+          </div>
+          <div class="nav__menu-element">
+            <a class="hyper hyperAbout" href="#">О нас</a>
+          </div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="container">
+          <div class="main__form">
+            <p id='main__title' class="main__title">Создать Заявку</p>
+            <div class="main__form-container">
+              <div class="main__form-box">
+                <div class="main__form-input">
+                  <!-- РЕДАКТИРОВАНИЕ ИНПУТА - DISPLAY NONE - ADDITIONAL FORM -->
+                  <input
+                    placeholder="Город отправителя"
+                    id="InputShipper"
+                    class="InputShipper"
+                    type="text"
+                    onkeydown="InputShipper.value=toRussianStr(inputShipper.value)"
+                    onchange="InputShipper.value=toRussianStr(inputShipper.value)"
+                  />
+                </div>
+                <div class="main__form-input">
+                  <input
+                    placeholder="Город получателя"
+                    id="InputReciever"
+                    class="InputReciever"
+                    type="text"
+                    onkeydown="InputReciever.value=toRussianStr(InputReciever.value)"
+                    onchange="InputReciever.value=toRussianStr(InputReciever.value)"
+                  />
+                </div>
+                    
+                <div class="main__form-dropdown DropdownType">
+                  <select
+                    name="Cargotype"
+                    id="Cargotype"
+                    onchange="detectType()"
+                  >
+                    <option value="type-docs" disabled selected hidden >Выберите тип груза</option>
+                    <option value="type-docs">Документы</option>
+                    <option value="type-container">Контейнер</option>
+                    <option value="type-carton">Коробка</option>
+                    <option value="type-other">Другое</option>
+                  </select>
+                </div>
+                <div class="main__form-submit">
+                  <!-- <button
+                    id="main__form-button-submit"
+                    class="main__form-button-submit"
+                    onclick="detectType()"
+                  >
+                    Далее
+                  </button> -->
+                  <button onclick="OpenMain()">открыть</button>
+                  <button onclick="closeMain()">спрятать</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Выбор "Документы" -->
+      <div class="additionalDocs" id="additionalDocs">
+        <div class="container">
+          <div class="additional__form">
+            <div class="additional__form-title">
+              Заполните дополнительные поля
+            </div>
+
+            <div class="additional__form-container">
+              <div class="additional__form-box">
+                <!-- Документы -->
+                <div id="additional__form-Docs" class="additional__form-Docs">
+                  <p id='yourdocs'>Ваши документы больше чем 0.2кг ?</p>
+                  <!-- Если больше - отрисовка как для коробки + предупреждение о правилах >0.2 -->
+                  <button type="submit" onclick="docsTwoYes() "value="Yes" id="DocsChooseYes">Да</button> 
+                  <button type="submit" onclick="docsTwoNo() "value="No" id="DocsChooseNo">Нет</button>
+                  <span id="Spisok">Переход на список</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Выбор "Контейнер" -->
+      <div class="additionalContainer" id="additionalContainer">
+        <div class="container">
+          <div class="additional__form">
+            <div class="additional__form-title">
+              Заполните дополнительные поля
+            </div>
+
+            <div class="additional__form-container">
+              <div class="additional__form-box">
+                <!-- КОНТЕЙНЕРЫ ТИП  -->
+                <div
+                  id="additional__form-inputContainer"
+                  class="additional__form-inputContainer"
+                >
+                  <select name="ContainerType" id="ContainerType">
+                    <option value="DC">
+                      DC (Dry Container) — сухой контейнер
+                    </option>
+                    <option value="RF">RF (Reefer) — рефконтейнер</option>
+                    <option value="OT">
+                      OT (Open Top) — контейнер с открывающейся брезентовой
+                      крышей
+                    </option>
+                    <option value="HC">
+                      HC (High Cube) — увеличенный по высоте контейнер
+                    </option>
+                    <option value="DC">
+                      DC (Dry Container) — сухой контейнер
+                    </option>
+                    <option value="PW">
+                      PW (Pallet Wide)— увеличенный по ширине контейнер
+                    </option>
+                    <option value="HT">
+                      HT (Hard Top) — контейнер с открывающейся металлической
+                      крышей
+                    </option>
+                    <option value="UP">
+                      UP (Upgraded) — контейнер усиленный, повышенной прочности
+                    </option>
+                    <option value="FRPL">
+                      FR (Flat Rack) и PL (Platform) — контейнер-платформа
+                    </option>
+                  </select>
+                </div>
+                <!-- КОНТЕЙНЕРЫ РАЗМЕР  -->
+                <div
+                  id="additional__form-inputContainer"
+                  class="additional__form-inputContainer"
+                >
+                  <select name="ContainerFoot" id="ContainerFoot">
+                    <option value="20">20 футов</option>
+                    <option value="40">40 футов</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Выбор "Коробка" -->
+      <div class="additionalBox" id="additionalBox">
+        <div class="container">
+          <div class="additional__form">
+            <div class="additional__form-title">
+              Заполните дополнительные поля
+            </div>
+
+            <div class="additional__form-container">
+              <div class="additional__form-box">
+                <!-- КОРОБКА -->
+                <span id='docsYes-box'>Ваши документы будут отправлены коробкой всвязи с правилами перевозки -></span>
+                <div
+                  id="additional__form-inputBox"
+                  class="additional__form-inputBox"
+                >
+                  <div class="additional__form-inputBox-">
+                    <input
+                      placeholder="Количество, шт"
+                      id="inputBoxQuantity"
+                      class="inputBoxQuantity"
+                      type="text"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Выбор "Другое" -->
+      <div class="additionalOther" id="additionalOther">
+        <div class="container">
+          <div class="additional__form">
+            <div class="additional__form-title">
+              Заполните дополнительные поля
+            </div>
+            <div class="additional__form-container">
+              <div class="additional__form-box">
+                <!-- Вес,Габариты -->
+
+                <div
+                  id="additional__form-inputWeight"
+                  class="additional__form-inputWeight"
+                >
+                  <input
+                    placeholder="Вес, кг"
+                    id="InputWeight"
+                    class="InputWeight"
+                    type="text"
+                  />
+                </div>
+                <div
+                  id="additional__form-inputDims"
+                  class="additional__form-inputDims"
+                >
+                  <input
+                    placeholder="Габариты, см: Д x В x Ш"
+                    id="InputDims"
+                    class="InputDims"
+                    type="text"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/switcherShipper.js"></script>
+    <script src="js/switcherReciever.js"></script>
+    
+  </body>
+</html>
