@@ -1,0 +1,788 @@
+<!--
+author: W3layouts
+author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Aggregator</title>
+    <!-- custom-theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="keywords"
+      content="Custom Transportation Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"
+    />
+    <script type="application/x-javascript">
+      addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+      	function hideURLbar(){ window.scrollTo(0,1); }
+    </script>
+    <!-- //custom-theme -->
+    <link
+      href="css/bootstrap.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <!-- services -->
+    <link
+      href="css/easy-responsive-tabs.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- //services -->
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" href="css/lightbox.css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link
+      href="css/styleDraft.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <!-- //Custom Theme files -->
+    <!-- js -->
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <!-- web-fonts -->
+    <!-- //font-awesome-icons -->
+    <link
+      href="//fonts.googleapis.com/css?family=Faster+One"
+      rel="stylesheet"
+    />
+    <link
+      href="//fonts.googleapis.com/css?family=Istok+Web:400,400i,700,700i"
+      rel="stylesheet"
+    />
+    <link
+      href="//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <!-- header -->
+    <div class="w3_navigation">
+      <div class="container">
+        <nav class="navbar navbar-default">
+          <div class="navbar-header navbar-left">
+            <button
+              type="button"
+              class="navbar-toggle collapsed"
+              data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1"
+            >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="w3_navigation_pos">
+              <h1><a href="index.html">TraceVL</a></h1>
+            </div>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div
+            class="collapse navbar-collapse navbar-right"
+            id="bs-example-navbar-collapse-1"
+          >
+            <nav class="menu menu--miranda">
+              <ul class="nav navbar-nav menu__list">
+                <li class="menu__item menu__item--current">
+                  <a href="index.html" class="menu__link">Главная</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#about" class="scroll menu__link">О нас</a>
+                </li>
+                <!-- <li class="menu__item"><a href="#features" class="scroll menu__link">Достоинства</a></li> -->
+                <li class="menu__item">
+                  <a href="#declare" class="scroll menu__link">Сервис</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#services" class="scroll menu__link">Информация</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#contact" class="scroll menu__link">Связь</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- //header -->
+    <!-- banner -->
+    <div class="jarallax banner">
+      <div id="banner1" class="banner-pos banner1">
+        <div class="container">
+          <div class="banner-info">
+            <h2>Агрегатор<span>TraceVL.ru</span></h2>
+            <h3>Грузоперевозок</h3>
+            <p>по Приморскому краю</p>
+          </div>
+        </div>
+        <div class="main">
+          <div class="app">
+            <button id="collapsible" class="collapsible">
+              <span>Рассчитать стоимость</span>
+            </button>
+            <div class="content">
+              <form class="form">
+                <div class="form__option">
+                  <input
+                    type="text"
+                    class="InputReciever field"
+                    placeholder="Город отправителя"
+                    onfocus="this.placeholder=''"
+                    onblur="this.placeholder='Город отправителя'"
+                    oninput="handleInput(this)"
+                    onchange="handleInput(this)"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="form__option">
+                  <input
+                    type="text"
+                    class="InputReciever field"
+                    placeholder="Город получателя"
+                    onfocus="this.placeholder=''"
+                    onblur="this.placeholder='Город получателя'"
+                    oninput="handleInput(this)"
+                    onchange="handleInput(this)"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="form__option">
+                  <select
+                    name="Cargotype"
+                    id="Cargotype"
+                    class="Cargotype field"
+                  >
+                    <option value="" disabled selected hidden>Тип груза</option>
+                    <option value="type-docs">Документы</option>
+                    <option value="type-container" disabled>Контейнер</option>
+                    <option value="type-carton" disabled>Коробка</option>
+                    <option value="type-cargo">Груз</option>
+                  </select>
+                </div>
+                <div id="form__option2" class="form__option form__option2">
+                  <input
+                    type="text"
+                    class="InputReciever field"
+                    placeholder="Город получателя"
+                    onfocus="this.placeholder=''"
+                    onblur="this.placeholder='Город получателя'"
+                    oninput="handleInput(this)"
+                    onchange="handleInput(this)"
+                    autocomplete="off"
+                  />
+                </div>
+                <div id="form__option2" class="form__option form__option2">
+                  <input
+                    placeholder="Адрес получателя"
+                    id="Input AdressReciever"
+                    onfocus="this.placeholder=''"
+                    onblur="this.placeholder='Адрес получателя'"
+					oninput="handleInput(this)"
+                    onchange="handleInput(this)"
+                    type="text"
+                    class="InputReciever field"
+                    autocomplete="off"
+                  />
+                </div>
+                <div id="form__option2" class="form__option form__option2">
+                  <input
+                    placeholder="Вес, кг"
+                    id="Input Weight"
+                    type="text"
+                    onfocus="this.placeholder=''"
+                    onblur="this.placeholder='Вес, кг'"
+                    class="Weight field"
+                    autocomplete="off"
+                  />
+                </div>
+                <div id="form__option3" class="form__option form__option3">
+				  <input
+				  type="text"
+				  class="InputReciever field"
+				  placeholder="Длина х Ширина х Высота, см"
+				  onfocus="this.placeholder=''"
+				  onblur="this.placeholder='Длина х Ширина х Высота, см'"
+				  oninput="handleInput(this)"
+				  onchange="handleInput(this)"
+				  autocomplete="off" />
+                </div>
+                <div id="form__option3" class="form__option form__option3">
+                  <div class="placeholder"></div>
+                  <input
+                    placeholder="Номер Телефона"
+                    id="Input PhoneShipper"
+                    onfocus="this.placeholder=''"
+                    onblur="this.placeholder='Номер телефона'"
+                    name="tel"
+                    type="tel"
+                    data-tel-input
+                    data-validate-field="tel"
+                    class="InputReciever field"
+                    autocomplete="off"
+                    maxlength="18"
+                  />
+                  <div class="placeholder"></div>
+                </div>
+                <div id="form__option3" class="form__option form__option3">
+				  <input
+				  type="text"
+				  class="InputReciever field"
+				  placeholder="ФИО Отправителя"
+				  onfocus="this.placeholder=''"
+				  onblur="this.placeholder='ФИО Отправителя'"
+				  oninput="handleInput(this)"
+				  onchange="handleInput(this)"
+				  autocomplete="off" />
+                </div>
+                <div class="validation">
+                  <input
+                    type="submit"
+                    class="validateBtn"
+                    value="Далее &#10149;"
+                  />
+                </div>
+              </form>
+              <div class="spaceout"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+    </div>
+
+    <!-- banner -->
+    <div class="jarallax w3ls-section w3-about" id="about">
+      <div class="container">
+        <h3 class="agileits-title">О нас</h3>
+        <div class="about-main">
+          <div class="w3ls-about-left col-md-6">
+            <img class="img-responsive" src="images/bb.jpg" alt="about-image" />
+          </div>
+          <div class="w3ls-about-right col-md-6">
+            <div class="stats-info-right">
+              <div class="stats-info-text">
+                <h4>70</h4>
+                <h5>крупных компаний сотрудничают</h5>
+                <p>С нами!</p>
+              </div>
+            </div>
+            <div class="w3_agileits-ab-main">
+              <h4>Онлайн-сервис «TraceVL»</h4>
+              <p class="about-text-w3l">
+                — это крупнейший маркетплейс по выбору логистической компании
+                для вашей персональной перевозки.
+              </p>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+    <!-- banner-bottom -->
+    <div id="declare" class="agileinfo-abt-btm w3ls-section">
+      <div class="container">
+        <h3 class="h3-w3l">
+          Мы хотим максимально упростить оформление логистических услуг и
+          стремимся к тому, чтобы каждый из участников сделки был уверен в
+          безопасном сотрудничестве.
+
+          <span> TRaceVL</span>
+        </h3>
+        <h4 class="h3-w3l"></h4>
+      </div>
+    </div>
+    <!-- Features -->
+    <div class="jarallax w3ls-section w3ls-features" id="features">
+      <div class="container">
+        <h3 class="agileits-title">Достоинства Сервиса</h3>
+        <div class="col-md-4 col-sm-4 col-xs-4 feature-main">
+          <div class="feature-txt">
+            <h4>Отслеживание!<i class="fa fa-truck" aria-hidden="true"></i></h4>
+          </div>
+          <div class="feature-txt">
+            <h4>Бесплатно!<i class="fa fa-database" aria-hidden="true"></i></h4>
+          </div>
+          <div class="feature-txt">
+            <h4>
+              Гибкость сервиса!<i class="fa fa-ship" aria-hidden="true"></i>
+            </h4>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-4 feature-img">
+          <img src="images/logo.jpg" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-4 feature-main fm-right">
+          <div class="feature-txt">
+            <h4><i class="fa fa-bus" aria-hidden="true"></i>А/М доставка</h4>
+          </div>
+          <div class="feature-txt">
+            <h4><i class="fa fa fa-plane" aria-hidden="true"></i>Самолетом</h4>
+          </div>
+          <div class="feature-txt">
+            <h4><i class="fa fa-subway" aria-hidden="true"></i>Ж/Д доставка</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //Features -->
+    <!-- gallery -->
+    <!-- <div id="gallery" class="jarallax w3ls-section gallery">
+		<div class="container">  
+			<div class="agileits-title">
+				<h3 class="agileits-title">Галерея</h3>
+			</div>
+			<div class="gallery-w3lsrow">
+				<div class="col-sm-3 col-xs-4 gallery-grids">
+					<div class="w3ls-hover">
+						<a href="images/g1.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
+							<img src="images/g1.jpg" class="img-responsive zoom-img" alt=""/>
+							<div class="view-caption">
+								<h5>Открыть</h5>
+								<span class="glyphicon glyphicon-search"></span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-sm-3 col-xs-4 gallery-grids">
+					<div class="w3ls-hover">
+						<a href="images/g2.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
+							<img src="images/g2.jpg" class="img-responsive zoom-img" alt=""/>
+							<div class="view-caption">
+								<h5>Открыть</h5>
+								<span class="glyphicon glyphicon-search"></span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-sm-3 col-xs-4 gallery-grids">
+					<div class="w3ls-hover">
+						<a href="images/g3.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
+							<img src="images/g3.jpg" class="img-responsive zoom-img" alt=""/>
+							<div class="view-caption">
+								<h5>Открыть</h5>
+								<span class="glyphicon glyphicon-search"></span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-sm-3 col-xs-4 gallery-grids">
+					<div class="w3ls-hover">
+						<a href="images/g4.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
+							<img src="images/g4.jpg" class="img-responsive zoom-img" alt=""/>
+							<div class="view-caption">
+								<h5>Открыть</h5>
+								<span class="glyphicon glyphicon-search"></span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-sm-3 col-xs-4 gallery-grids">
+					<div class="w3ls-hover">
+						<a href="images/g5.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
+							<img src="images/g5.jpg" class="img-responsive zoom-img" alt=""/>
+							<div class="view-caption">
+								<h5>Открыть</h5>
+								<span class="glyphicon glyphicon-search"></span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-sm-3 col-xs-4 gallery-grids">
+					<div class="w3ls-hover">
+						<a href="images/g6.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
+							<img src="images/g6.jpg" class="img-responsive zoom-img" alt=""/>
+							<div class="view-caption">
+								<h5>Открыть</h5>
+								<span class="glyphicon glyphicon-search"></span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-sm-3 col-xs-4 gallery-grids">
+					<div class="w3ls-hover">
+						<a href="images/g7.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
+							<img src="images/g7.jpg" class="img-responsive zoom-img" alt=""/>
+							<div class="view-caption">
+								<h5>Открыть</h5>
+								<span class="glyphicon glyphicon-search"></span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-sm-3 col-xs-4 gallery-grids">
+					<div class="w3ls-hover">
+						<a href="images/g8.jpg" data-lightbox="example-set" data-title="Lorem Ipsum is simply dummy the when an unknown galley of type and scrambled it to make a type specimen.">
+							<img src="images/g8.jpg" class="img-responsive zoom-img" alt=""/>
+							<div class="view-caption">
+								<h5>Открыть</h5>
+								<span class="glyphicon glyphicon-search"></span>
+							</div>
+						</a>
+					</div>
+				</div>  
+				<div class="clearfix"> </div> 
+			</div>
+			<!--  light box js -->
+    <!-- <script src="js/lightbox-plus-jquery.min.js"> </script>  -->
+    <!-- //light box js-->
+    <!-- </div> 
+	</div> -->
+    <!-- //gallery -->
+    <!-- services section -->
+
+    <!-- //agents section -->
+    <!-- service-bootom-->
+    <div class="jarallax w3ls-section wthree-service-bottom">
+      <div class="container">
+        <h3 class="agileits-title">У вас остались вопросы?</h3>
+        <a href="#contact" class="scroll">Свяжитесь с нами</a>
+      </div>
+    </div>
+    <!-- //service-bottom -->
+    <!-- team -->
+    <div class="jarallax w3ls-section w3_agileits-services" id="services">
+      <div class="demo">
+        <div class="container">
+          <div class="w3-welcome">
+            <h3 class="agileits-title">Вариативность</h3>
+          </div>
+          <div id="verticalTab">
+            <ul class="resp-tabs-list">
+              <li>
+                <div class="tab1">
+                  <h3>Морские перевозки</h3>
+                </div>
+              </li>
+              <li>
+                <div class="tab1">
+                  <h3>Автомобильная доставка</h3>
+                </div>
+              </li>
+              <li>
+                <div class="tab1">
+                  <h3>Доставка по воздуху</h3>
+                </div>
+              </li>
+              <li>
+                <div class="tab1">
+                  <h3>Железнодорожный транспорт</h3>
+                </div>
+              </li>
+            </ul>
+            <div class="resp-tabs-container">
+              <div>
+                <div class="col-md-8 tabs-right1">
+                  <h6>Морские перевозки</h6>
+                  <p>
+                    Универсальный выбор, который будет особенно актуален для
+                    тех, кто ищет ответ на вопрос, какие виды транспорта
+                    подходят для перевозки больших объемов продукции: морем
+                    можно доставить самый крупный заказ, причем товар может быть
+                    даже негабаритным или очень тяжелым, но стоит учесть, до
+                    «путешествие» в данном случае будет медленным
+                  </p>
+                  <p class="agile-tab-txt"></p>
+                  <div class="button"></div>
+                </div>
+                <div class="col-md-4 tabs-right2">
+                  <img src="images/g8.jpg" class="img-responsive" alt="" />
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div>
+                <div class="col-md-8 tabs-right1">
+                  <h6>Автомобильная доставка</h6>
+                  <p>
+                    осуществляется быстро, характеризуется общей маневренностью,
+                    допускает удобную отправку «от двери к двери», а также
+                    создает особые удобства, если нужно переправить малую и
+                    легкую партию
+                  </p>
+                  <p class="agile-tab-txt"></p>
+                  <div class="button"></div>
+                </div>
+                <div class="col-md-4 tabs-right2">
+                  <img src="images/g7.jpg" class="img-responsive" alt="" />
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div>
+                <div class="col-md-8 tabs-right1">
+                  <h6>Доставка по воздуху</h6>
+                  <p>
+                    довольно дорогой вариант, но если необходимо перевезти
+                    продукцию на большие расстояния, обеспечив ее полную
+                    сохранность, ему нет равных.
+                  </p>
+                  <p class="agile-tab-txt"></p>
+                  <div class="button"></div>
+                </div>
+                <div class="col-md-4 tabs-right2">
+                  <img src="images/s1.jpg" class="img-responsive" alt="" />
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div>
+                <div class="col-md-8 tabs-right1">
+                  <h6>Железнодорожный транспорт</h6>
+                  <p>
+                    один из самых недорогих и удобных: рейсы осуществляются
+                    регулярно, не зависят от особенностей погоды, времени года и
+                    удаленности адресата (разветвленная сеть дорог позволит
+                    доставить продукцию практически в любой уголок страны).
+                  </p>
+                  <p class="agile-tab-txt"></p>
+                  <div class="button"></div>
+                </div>
+                <div class="col-md-4 tabs-right2">
+                  <img src="images/g5.jpg" class="img-responsive" alt="" />
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div style="height: 30px; clear: both"></div>
+      </div>
+    </div>
+    <script src="js/easy-responsive-tabs.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#horizontalTab").easyResponsiveTabs({
+          type: "default", //Types: default, vertical, accordion
+          width: "auto", //auto or any width like 600px
+          fit: true, // 100% fit in a container
+          closed: "accordion", // Start closed if in accordion view
+          activate: function (event) {
+            // Callback function if tab is switched
+            var $tab = $(this);
+            var $info = $("#tabInfo");
+            var $name = $("span", $info);
+            $name.text($tab.text());
+            $info.show();
+          },
+        });
+        $("#verticalTab").easyResponsiveTabs({
+          type: "vertical",
+          width: "auto",
+          fit: true,
+        });
+      });
+    </script>
+    <!-- //team -->
+    <!-- testimonals section -->
+    <!-- <div class="jarallax w3ls-section testimonials" id="testimonials">
+		<div class="container">
+			<h3 class="agileits-title">Testimonials</h3>
+			<div class="col-md-6 col-sm-6  w3ls-testi-left">
+				<img src="images/2.jpg" class="img-responsive" alt="" />
+			</div>
+			<div class="col-md-6 col-sm-6 box agileits-feedback-grids">
+					<div class="scroll">
+						<div class="testimonal grid-1">
+							<p><i class="fa fa-quote-right" aria-hidden="true"></i>Cras tortor ipsum, gravida vitae finibus non, bibendum quis turpis. Cras semper accumsan metus, et aliquet diam vestibulum ut. </p>
+							<h3 class="agile-testi-right"> Hoskins</h3>
+						</div>		
+						<div class="testimonal grid-1">
+							<p><i class="fa fa-quote-right" aria-hidden="true"></i>Cras tortor ipsum, gravida vitae finibus non, bibendum quis turpis. Cras semper accumsan metus, et aliquet diam vestibulum ut. </p>
+							<h3 class="agile-testi-right"> Federeka</h3>
+						</div>
+						<div class="testimonal grid-1">
+							<p><i class="fa fa-quote-right" aria-hidden="true"></i>Cras tortor ipsum, gravida vitae finibus non, bibendum quis turpis. Cras semper accumsan metus, et aliquet diam vestibulum ut. </p>
+							<h3 class="agile-testi-right"> Daniel</h3>
+						</div>
+						<div class="testimonal grid-1">
+							<p><i class="fa fa-quote-right" aria-hidden="true"></i>Cras tortor ipsum, gravida vitae finibus non, bibendum quis turpis. Cras semper accumsan metus, et aliquet diam vestibulum ut. </p>
+							<h3 class="agile-testi-right"> Tammy</h3>
+						</div>
+						<div class="testimonal grid-1">
+							<p><i class="fa fa-quote-right" aria-hidden="true"></i>Cras tortor ipsum, gravida vitae finibus non, bibendum quis turpis. Cras semper accumsan metus, et aliquet diam vestibulum ut. </p>
+							<h3 class="agile-testi-right"> Roland</h3>
+						</div>
+						<div class="testimonal grid-1">
+							<p><i class="fa fa-quote-right" aria-hidden="true"></i>Cras tortor ipsum, gravida vitae finibus non, bibendum quis turpis. Cras semper accumsan metus, et aliquet diam vestibulum ut. </p>
+							<h3 class="agile-testi-right"> Maxwell</h3>
+						</div>
+					</div>
+			</div>
+			</div>
+		</div> -->
+    <!-- //Testimonial section -->
+    <!-- subscribe -->
+    <div class="jarallax w3ls-section wthree-sub subscribe">
+      <div class="container">
+        <h3 class="agileits-title">Закажите<span> Звонок</span></h3>
+        <form action="#" method="post">
+          <input
+            class="treg"
+            type="tel"
+            name="email"
+            placeholder="напишите свой номер..."
+            required=""
+          />
+          <input type="submit" value="Заказать" />
+          <div class="clearfix"></div>
+        </form>
+        <p>
+          Оставляя свой номер телефона вы соглашаетесь с нашей
+          <a
+            href="https://www.mann-ivanov-ferber.ru/help/politika-konfidenczialnosti/#:~:text=%D0%9D%D0%B0%D1%81%D1%82%D0%BE%D1%8F%D1%89%D0%B0%D1%8F%20%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8%20(%D0%B4%D0%B0%D0%BB%D0%B5%D0%B5%20%E2%80%94%20%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0,%C2%BB)%2C%20%D0%BC%D0%BE%D0%B6%D0%B5%D1%82%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C%20%D0%B2%D0%BE%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F"
+            >Политикой конфиденциальности.</a
+          >
+        </p>
+      </div>
+    </div>
+    <!-- //subscribe -->
+    <!-- contact -->
+    <div class="jarallax w3ls-section contact" id="contact">
+      <div class="container">
+        <h3 class="agileits-title">Свяжитесь с Нами</h3>
+        <div class="contact-form">
+          <div class="col-md-7 contact-right">
+            <h5>Напишите нам сообщение</h5>
+            <p>Наши сотрудники проконсультируют вас в кратчайшие сроки</p>
+            <form action="#" method="post">
+              <input type="text" name="Name" placeholder="Имя" required="" />
+              <input
+                type="email"
+                class="email"
+                name="Email"
+                placeholder="Email"
+                required=""
+              />
+              <textarea
+                name="Message"
+                placeholder="Сообщение"
+                required=""
+              ></textarea>
+              <input type="submit" value="Отправить" />
+            </form>
+          </div>
+          <div class="col-md-5 contact-left">
+            <div class="address">
+              <h5>Адрес:</h5>
+              <p>
+                <i class="glyphicon glyphicon-home"></i> 333 Broome St New York,
+                NY 10002,
+              </p>
+            </div>
+            <div class="address address-mdl">
+              <h5>Номер телефона:</h5>
+              <p><i class="glyphicon glyphicon-earphone"></i> +9900887766</p>
+              <p><i class="glyphicon glyphicon-phone"></i> +11 222 333</p>
+            </div>
+            <div class="address">
+              <h5>Электронная почта:</h5>
+              <p>
+                <i class="glyphicon glyphicon-envelope"></i>
+                <a href="mailto:info@example.com">mail@example.com</a>
+              </p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <div class="agileits-w3layouts-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d23304.315148733458!2d131.9270426725298!3d43.103687014246404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1618725563456!5m2!1sru!2sru"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+    <!-- //contact -->
+    <div class="w3_agile-copyright text-center">
+      <p>
+        © 2021 TraceVL | Design by
+        <a href="//mailto:graandeamoree@gmail.com/">GraandeAmoree</a>
+      </p>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+            <h3>Custom</h3>
+            <img src="images/logo.jpg" alt="construct" class="img-responsive" />
+            <span
+              >Lorem ipsum dolor sit amet, Sed ut perspiciatis unde omnis iste
+              natus error sit voluptatem , eaque ipsa quae ab illo inventore
+              veritatis et quasi architecto beatae vitae dicta sunt
+              explicabo.accusantium doloremque laudantium, totam rem
+              aperiamconsectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //Modal -->
+    <script src="js/index.js"></script>
+    <!-- //banner -->
+    <script src="js/jarallax.js"></script>
+    <script src="js/SmoothScroll.min.js"></script>
+    <script type="text/javascript">
+      /* init Jarallax */
+      $(".jarallax").jarallax({
+        speed: 0.5,
+        imgWidth: 1366,
+        imgHeight: 768,
+      });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        /*
+					var defaults = {
+					containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+					};
+				*/
+
+        $().UItoTop({ easingType: "easeOutQuart" });
+      });
+    </script>
+
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+          event.preventDefault();
+          $("html,body").animate(
+            { scrollTop: $(this.hash).offset().top },
+            1000
+          );
+        });
+      });
+    </script>
+    <!-- /ends-smoth-scrolling -->
+    <!-- //here ends scrolling icon -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/draft.js"></script>
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>

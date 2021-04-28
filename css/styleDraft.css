@@ -1,0 +1,335 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+/* убрать эктив бордер с инпутов и текстбоксов */
+select:focus,
+textarea:focus,
+input:focus {
+  outline: none;
+}
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+.collapsible {
+  background-color: #ffa600d3;
+  display: flex;
+  margin: 0 auto;
+  cursor: pointer;
+  padding: 18px;
+  width: 1200px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: #000000;
+  letter-spacing: 10px;
+  font-size: 32px;
+  border-radius: 50px;
+  text-indent: 50px;
+  margin-top: 50px;
+}
+.collapsible:hover {
+  background-color: #ffa600;
+}
+.collapsible span {
+  text-align: center;
+  margin: 0 auto;
+}
+.active {
+  background-color: #ffa600;
+  border-radius: 50px 50px 0px 0px;
+}
+
+.collapsible:after {
+  content: "\002B";
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #ffa600;
+  border-radius: 0 0 50px 50px;
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  
+  
+}
+
+.form {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.form__option {
+  border-bottom: 5px solid #ffffff00;
+  width: 30%;
+  width: 325px;
+  height: 50px;
+  margin: 10px auto;
+  border-radius: 15px;
+}
+.form__option2,  .form__option3{
+    display: none;
+}
+.article{
+    display: block;
+}
+ input, select {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #000000;
+  background: rgba(254, 254, 254, 0.24);
+  box-shadow: 0 0 5px #000;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  
+  height: 50px;
+  text-align: center;
+  
+}
+.content input, select {
+  width: 325px;
+}
+
+select{
+    text-align-last: center;
+}
+input::placeholder, select::placeholder {
+    color: #000;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+  }
+
+.spaceout{
+    margin: 20px;
+}
+option{
+  color: rgb(77, 76, 76);
+  background-color: #ffa600bb;
+  font-size: 24px;
+}
+option:disabled{
+  background-color: #9c9c9cbb;
+}
+
+#banner1 {
+  transition: min-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+}
+.validation{
+  margin-right: 30px;
+  margin-top: 10px;
+  margin-left: auto;
+  display: block;
+  float: right;
+}
+.banner-info h2 span{
+  animation-name: site;
+  animation-duration: 1s;
+ 
+}
+@keyframes site {
+  0%   { left:-60px; top:150px;}
+  100% { left:-60px; top:43px;}
+}
+.banner-info h2{
+  animation-name: web;
+  animation-duration: 1s;
+}
+
+@keyframes web {
+  0%   { left:0px; top:-150px;}
+  100% { left:0px; top:0px;}
+}
+.banner-info h3{
+  animation-name: webtitle;
+  animation-duration: 1s;
+  position: relative;
+}
+@keyframes webtitle {
+  0%   { left:50px; top:0px;}
+  100% { left:0px; top:0px;}
+}
+.banner-info p{
+  animation-name: posttitle;
+  animation-duration: 1s;
+  position: relative;
+}
+@keyframes posttitle {
+  0%   { left:300px; top:0px;}
+  100% { left:0px; top:0px;}
+}
+p.about-text-w3l{
+  font-size: 1.5em;
+}
+.subscribe input[type="submit"]{
+  float: right;
+}
+
+.contact-form input[type="text"], .contact-form input[type="email"]{
+  border-radius: 0px ;
+}
+.contact-form input[type="submit"]{
+  border-radius: 50px ;
+}
+@media screen and (max-width: 1680px){
+	.collapsible{
+		width: 900px;
+	}
+  .content{
+    width: 900px;
+  }
+  
+  .validation{
+    width: 150px;
+    margin-right:225px ;
+  }
+}
+@media screen and (max-width: 1280px){
+  .collapsible{
+   
+    width: 600px;
+    letter-spacing: 2px;
+	}
+  .content{
+    
+    width: 600px;
+  }
+  .validation input{
+    width: 200px;
+  }
+ 
+
+}
+@media screen and (max-width: 600px){
+  .collapsible{
+  
+    width: 400px;
+    letter-spacing: 0px;
+    text-indent: 0px;
+    font-size: 28px;
+	}
+  .content{
+    
+    width: 400px;
+  }
+  .validation input{
+    width: 200px;
+  }
+  .validation {
+    display: block;
+    margin: 10px auto;
+    width: 200px;
+  }
+}
+@media screen and (max-width: 414px){
+  
+  .collapsible{
+    width: 300px;
+    letter-spacing: 0px;
+    text-indent: 0px;
+    font-size: 20px;
+	}
+  .content{
+    width: 300px;
+  }
+  .validation input{
+    width: 200px;
+  }
+  .form__option{
+    width: 200px;
+  }
+  .form__option input, select{
+    width: 200px;
+  }
+
+  .validation {
+    display: block;
+    margin: 10px auto;
+    width: 200px;
+  }
+}
